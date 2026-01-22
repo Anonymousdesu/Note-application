@@ -1,0 +1,6 @@
+@Web.Note_application.API_HostAddress = http://localhost:5208
+
+GET {{Web.Note_application.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

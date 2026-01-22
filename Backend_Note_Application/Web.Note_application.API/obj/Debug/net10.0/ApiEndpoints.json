@@ -1,0 +1,97 @@
+[
+  {
+    "ContainingType": "Web.Note_application.API.Controllers.NotesController",
+    "Method": "CreateNote",
+    "RelativePath": "api/Notes/CreateNote",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "payload",
+        "Type": "Web.Note_application.API.DTO.Request.NoteRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Note_application.API.Controllers.NotesController",
+    "Method": "DeleteNote",
+    "RelativePath": "api/Notes/DeleteNote/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Note_application.API.Controllers.NotesController",
+    "Method": "GetNotes",
+    "RelativePath": "api/Notes/GetNotes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Note_application.API.Controllers.NotesController",
+    "Method": "UpdateNote",
+    "RelativePath": "api/Notes/UpdateNote/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "payload",
+        "Type": "Web.Note_application.API.Model.NoteModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Note_application.API.Controllers.UserController",
+    "Method": "LogIn",
+    "RelativePath": "auth/User/LogIn",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "Web.Note_application.API.DTO.Request.LoginRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Note_application.API.Controllers.UserController",
+    "Method": "CreateUser",
+    "RelativePath": "auth/User/SignUp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "Web.Note_application.API.Model.SignUpRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
