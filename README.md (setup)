@@ -1,0 +1,60 @@
+Project setup
+
+
+--Frontend
+
+  - Download Node.js (if not installed)
+
+	- use "npm install" to install vite
+
+	- to run use "npm run dev"
+
+	- make sure to setup a database 
+
+
+--Backend
+
+  - .NET version 10.0 Visual studio 2026
+
+	- use self-signed certificate (SSL)
+
+	- update connection "DefaultConnection" in appsetting.development.json to your MSSQL server 	
+
+	- For Local Format using window authentication
+
+	"DefaultConnection":Server=your instance;Database=Note_application;Trusted_Connection=True;Integrated Security=True  add this if need SSL (TrustServerCertificate=True)"
+    
+	-For Local Format using SQL Server authentication
+   
+	"DefaultConnection": "Server=Your Instance;Database=Note_application;User Id=your id;Password=your paaword;Trusted_Connection=True;Integrated Security=True;TrustServerCertificate=True"
+
+
+-- database
+
+  - Database provided in GitHub is are for MSSQL 2022 version 17.00
+
+	- you can back up the database 
+
+	(if not able to restore database make sure to create database)
+
+	- create a new database in MSSQL name: Note_application
+
+	run these queries in the Note_application
+
+-User table:
+
+CREATE TABLE [dbo].[Users](
+  [UserId] [int] IDENTITY(1,1) NOT NULL,
+  [UserName] [nvarchar](100) NOT NULL,
+  [Password] [nvarchar](255) NOT NULL,
+  [CreatedAt] [datetime] NOT NULL)
+
+-Notes table 
+
+CREATE TABLE [dbo].[Notes](
+  [NoteId] [int] IDENTITY(1,1) NOT NULL,
+  [Title] [nvarchar](200) NOT NULL,
+  [Content] [nvarchar](max) NOT NULL,
+  [UserId] [int] NOT NULL,
+  [CreatedAt] [datetime] NOT NULL,
+  [UpdatedAt] [datetime] NULL)
